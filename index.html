@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="resume">
+        <header class="header">
+            <h1>{{ name }}</h1>
+            <p class="subtitle">{{ title }}</p>
+            <div class="contact-info">
+                <p>Phone: {{ phone }}</p>
+                <p>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
+                <p><a href="{{ github }}">GitHub</a></p>
+            </div>
+        </header>
+
+        <!-- Left Section -->
+        <div class="content">
+            <aside class="sidebar">
+                <section class="education">
+                    <h2>Education</h2>
+                    {% for edu in education %}
+                    <div>
+                        <h3>{{ edu.degree }}</h3>
+                        <p>{{ edu.institution }}</p>
+                        <p>{{ edu.dates }}</p>
+                        {% if edu.degree == "Python Core Certificate" %}
+                        <p><a href="{{ url_for('static', filename='certificate.pdf') }}" target="_blank">Python Core Certificate (PDF)</a></p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </section>
+
+                <section class="skills">
+                    <h2>Skills</h2>
+                    <ul>{% for skill in skills %}
+                        <li>{{ skill }}</li>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- Right Section -->
+            <main class="main-content">
+                <section class="objective">
+                    <h2>Objective</h2>
+                    <p>{{ objective }}</p>
+                </section>
+
+                <section class="work-experience">
+                    <h2>Experience</h2>
+                    {% for job in experience %}
+                    <div>
+                        <h3>{{ job.role }} - {{ job.company }}</h3>
+                        <p>{{ job.dates }}</p>
+                        <ul>
+                        {% for desc in job.description %}
+                            <li>{{ desc }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </section>
+                <section class="work-experience">
+                    <h2>Projects</h2>
+                    {% for project in projects %}
+                    <div>
+                        <h3><a href="{{ project.link }}">{{ project.name }}</a></h3>
+                        <p>{{ project.description }}</p>
+                    </div>
+                    {% endfor %}
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

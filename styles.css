@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.resume {
+    width: 900px;
+    margin: 30px auto;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+.header h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Content */
+.content {
+    display: flex;
+    margin-top: 20px;
+}
+
+.sidebar {
+    width: 30%;
+    background-color: #e6cccb; /* Light pink sidebar */
+    padding: 20px;
+}
+
+.main-content {
+    width: 70%;
+    padding: 20px;
+}
+
+/* Section Headers */
+section h2 {
+    font-size: 20px;
+    color: #444;
+    border-bottom: 2px solid #e8e8e8;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Education */
+.education-item {
+    margin-bottom: 15px;
+}
+
+.education-item h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.education-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Skills */
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    font-size: 14px;
+    color: #2a2a2a;
+    margin: 5px 0;
+}
+
+/* Profile Summary */
+.objective p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Work Experience */
+.work-item {
+    margin-bottom: 20px;
+}
+
+.work-item h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+}
+
+.work-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
